@@ -11,6 +11,12 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog"
 import { ExternalLink } from 'lucide-react'
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip"
 
 const mirrors = [
   { name: 'AlmaLinux', href: '/almalinux/' },
@@ -26,14 +32,14 @@ const mirrors = [
   { name: 'Rockylinux', href: '/rockylinux/' },
 ]
 
-export function MirrorsPage() {
+export default function Component() {
   const [isPrivacyPolicyOpen, setIsPrivacyPolicyOpen] = useState(false)
 
   return (
     <div className="flex flex-col h-screen w-full items-center justify-center bg-[#1e1e1e] font-mono text-[#c6c6c6]">
       <div className="border border-[#4CAF50] p-12 rounded-lg mb-6">
         <header className="bg-[#2d2d2d] px-4 py-2 mb-6">
-          <h1 className="text-lg font-bold text-[#4CAF50]">0xEmmas Mirrors</h1>
+          <h1 className="text-lg font-bold text-[#4CAF50]">0xEmma's Mirrors</h1>
         </header>
         <main className="flex-1 overflow-auto px-4 py-6">
           <ul className="space-y-2">
@@ -70,13 +76,22 @@ export function MirrorsPage() {
             </div>
           </DialogContent>
         </Dialog>
-        <Button 
-          variant="outline" 
-          className="bg-[#4CAF50] text-white hover:bg-[#45a049] border-[#4CAF50]"
-          onClick={() => window.open('https://www.buymeacoffee.com/G3TLc5nV9', '_blank')}
-        >
-          Donate <ExternalLink className="ml-2 h-4 w-4" />
-        </Button>
+        <TooltipProvider>
+          <Tooltip>
+            <TooltipTrigger asChild>
+              <Button 
+                variant="outline" 
+                className="bg-[#4CAF50] text-white hover:bg-[#45a049] border-[#4CAF50]"
+                onClick={() => window.open('https://www.buymeacoffee.com/G3TLc5nV9', '_blank')}
+              >
+                Donate <ExternalLink className="ml-2 h-4 w-4" />
+              </Button>
+            </TooltipTrigger>
+            <TooltipContent className="bg-[#2d2d2d] text-[#c6c6c6] border-[#4CAF50] max-w-xs text-center">
+              <p>While I run these out of passion, they do cost money - any support is gratefully appreciated but not expected.</p>
+            </TooltipContent>
+          </Tooltip>
+        </TooltipProvider>
       </div>
     </div>
   )
