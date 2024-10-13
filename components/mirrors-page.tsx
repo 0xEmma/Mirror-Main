@@ -32,7 +32,7 @@ const mirrors = [
   { name: 'Rockylinux', href: '/rockylinux/' },
 ]
 
-export default function Component() {
+export function MirrorsPage() {
   const [isPrivacyPolicyOpen, setIsPrivacyPolicyOpen] = useState(false)
 
   return (
