@@ -39,7 +39,7 @@ export function MirrorsPage() {
     <div className="flex flex-col min-h-screen w-full items-center justify-center bg-gray-950 font-sans text-gray-200">
       <div className="w-full max-w-4xl p-8">
         <header className="mb-12 text-center">
-          <h1 className="text-4xl font-bold text-gray-100 mb-2">0xEmma's Mirrors</h1>
+          <h1 className="text-4xl font-bold text-gray-100 mb-2">0xEmmas Mirrors</h1>
           <p className="text-gray-400">Fast and reliable Linux distribution mirrors</p>
         </header>
         <main className="bg-gray-900 shadow-lg rounded-lg p-8 mb-8">
