@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { MirrorsPage } from "@/components/mirrors-page.tsx"
 
 
