@@ -33,7 +33,7 @@ export function MirrorsPage() {
     <div className="flex flex-col h-screen w-full items-center justify-center bg-[#1e1e1e] font-mono text-[#c6c6c6]">
       <div className="border border-[#4CAF50] p-12 rounded-lg mb-6">
         <header className="bg-[#2d2d2d] px-4 py-2 mb-6">
-          <h1 className="text-lg font-bold text-[#4CAF50]">0xEmma's Mirrors</h1>
+          <h1 className="text-lg font-bold text-[#4CAF50]">0xEmmas Mirrors</h1>
         </header>
         <main className="flex-1 overflow-auto px-4 py-6">
           <ul className="space-y-2">
